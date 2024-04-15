@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main main aside"
+      "footer footer footer";
+    width: 1536px;
+    margin: 0 auto;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+aside {
+    grid-area: aside;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+
+    background-color: #26252d;
+    color: white;
+    padding: 40px;
+}
+
+header {
+    grid-area: header;
+    grid-column: span 3;
+
+    width: 1536px;
+    margin: 0 auto;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #80808025;
+}
+
+header h2 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+input[type="search"] {
+    background-color: #80808025;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post {
+    width: 300px;
+    position: relative;
+}
+
+.post:first-child {
+    width: 620px;
+}
+
+.post_img {
+    overflow: hidden;
+}
+
+.post:hover img {
+    transform: scale(1.5);
+    transition: all .1s linear;
+}
+
+.post img {
+    width: 100%;
+}
+
+.post_category {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background-color: #0000ff80;
+    backdrop-filter: blur(1px);
+    padding: 10px;
+    white-space: nowrap;
+    color: white;
+}
